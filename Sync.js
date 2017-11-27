@@ -8,8 +8,9 @@ Im.onchange = function() {
 	let file = Im.files[0];
 	reader = new FileReader();
 	reader.readAsText(file, "UTF-8");
-	console.log(reader);
-	c.innerText = reader.result;
+	reader.onload = function() {
+		c.innerText = reader.result;
+	}
 }
 
 run.onclick = function(){
