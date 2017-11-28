@@ -13,5 +13,10 @@ Im.onchange = function() {
 	}
 }
 
+function passCodeToPy(){
+	//give textarea data as variable to python script
+}
+
 run.onclick = function(){
+	passCodeToPy();
 }
