@@ -1,9 +1,9 @@
 let Im = document.getElementById('import');
-let Ou = document.getElementById('o');
-let Co = document.getElementById('c');
-let CodeData = document.getElementById('CodeData');
+let o = document.getElementById('o');
+let c = document.getElementById('c');
 let run = document.getElementById('run');
-
+let save = document.getElementById('save');
+// let CodeData = "";
 Im.onchange = function() {
 	let file = Im.files[0];
 	reader = new FileReader();
@@ -12,11 +12,43 @@ Im.onchange = function() {
 		c.innerText = reader.result;
 	}
 }
+function saveTextAsFile(filename,data)
+{
+    var textToWrite = data;
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+    var fileNameToSaveAs = filename;
 
-function passCodeToPy(){
-	//give textarea data as variable to python script
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    if (window.webkitURL != null)
+    {
+        // Chrome allows the link to be clicked
+        // without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    else
+    {
+        // Firefox requires the link to be added to the DOM
+        // before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+}
+function passCodeToPy(Data){
+	//give data as variable to python script
+	return Data;
 }
 
 run.onclick = function(){
-	passCodeToPy();
+	// console.log("hey");
+	// let CodeData = ;
+	o.innerHTMl = c.innerHTML
+}
+save.onclick = function(){
+	saveTextAsFile(window.prompt("file name"),c.innerHTML);
 }
