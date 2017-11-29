@@ -3,6 +3,7 @@ let o = document.getElementById('o');
 let c = document.getElementById('c');
 let run = document.getElementById('run');
 let save = document.getElementById('save');
+let cls = document.getElementsById('clear') 
 // let CodeData = "";
 Im.onchange = function() {
 	let file = Im.files[0];
