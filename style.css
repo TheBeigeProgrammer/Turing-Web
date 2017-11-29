@@ -5,7 +5,7 @@ html{
 body{
 	width:99%;
 	height:92%;
-	background-color: #af4cab;
+	background-color: #DE6461;
 }
 *{
 	margin: 0px;
@@ -23,10 +23,10 @@ body{
 
 }
 .TXT{
-	background-color: #4CAF50; /* Green */
+	background-color: #45D64E; /* Green */
 }
 .b{
-	background-color: #4CAF50; /* Green */
+	background-color: #45D64E; /* Green */
 	 border: none;
 	 /*border-radius: 10px;*/
 	 color: white;
