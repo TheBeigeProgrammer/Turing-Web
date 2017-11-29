@@ -9,7 +9,7 @@ Im.onchange = function() {
 	reader = new FileReader();
 	reader.readAsText(file, "UTF-8");
 	reader.onload = function() {
-		c.innerText = reader.result;
+		c.value = reader.result;
 	}
 }
 function saveTextAsFile(filename,data)
@@ -46,8 +46,7 @@ function passCodeToPy(Data){
 
 run.onclick = function(){
 	// console.log("hey");
-	// let CodeData = ;
-	o.innerHTMl = c.innerHTML
+		o.value = c.value.split(" ").reverse().toString().replace(/,/g," ")
 }
 save.onclick = function(){
 	console.log(c.vale);
