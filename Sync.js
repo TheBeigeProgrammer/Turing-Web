@@ -50,5 +50,6 @@ run.onclick = function(){
 	o.innerHTMl = c.innerHTML
 }
 save.onclick = function(){
-	saveTextAsFile(window.prompt("file name"),c.innerHTML);
+	console.log(c.vale);
+	saveTextAsFile(window.prompt("file name"),c.value);
 }
