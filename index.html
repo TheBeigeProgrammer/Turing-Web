@@ -2,37 +2,39 @@
 <html>
 <head>
 	<title>turing</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div class="grid">
+		<div id="buttons">
+			<button id = "run">Run</button>
+			<button id = "save">Save</button>
+			<!-- import file -->
+			<h>Import A File:</h>
+			<input type="file" id = "import"/>
+			<!-- <button type="input" name="button" id="import" >Choose file</button> -->
+			<input type="Text" name="get" class = "get">
+			<button type="submit" class = "get">submit</button>
+		</div>
+
+		<div class="IDE">
+
+			<div id="Code" class="TXTconsainer">
+				<div id="CodeTitle">
+					<p>Code:</p>
+					<button id="clear" type="button">Clear</button>
+				</div>
+				<textarea class="TXT" id = "CodeData">Write Code here</textarea>
+			</div>
 
 
-	<div id="buttons">
-		<button id = "run" class="b">Run</button>
-		<button id = "save" class="b">Save</button>
-		<!-- import file -->
-		<h class = "b" >Import A File:</h>
-		<input type="file" id = "import" class="b" title="import" />
-		<input type="Text" name="get" class = "get">
-		<button class = "get">submit</button>
-
+			<div id="Console" class="TXTconsainer">
+				<p id="ConsoleTitle">Console:</p>
+				<textarea class="TXT" id = "ConsoleData" readonly></textarea>
+			</div>
+		</div>
 	</div>
-
-
-	<div id="code">
-		<p class = "ce" id = "cls">Code:</p>
-		<!-- <iframe id="c" src="turing.html"></iframe> -->
-		<textarea class="TXT" id = "c">Write Your Code Here</textarea>
-	</div>
-
-
-	<div id="out">
-		<p class="ce">Console:</p>
-		<!-- <iframe id="o" src="out.html"></iframe> -->
-		<textarea class="TXT" id = "o" readonly></textarea>
-	</div>
-
+	<script type="text/javascript" src="Sync.js"></script>
 
 </body>
-<script type="text/javascript" src="Sync.js"></script>
-<link rel="stylesheet" href="style.css">
 </html>
