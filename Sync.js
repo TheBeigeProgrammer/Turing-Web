@@ -1,4 +1,6 @@
-let Im = document.getElementById('import');
+let Up = document.getElementById('Upload');
+let Im = document.createElement("input");
+Im.type = "file";
 let o = document.getElementById('ConsoleData');
 let c = document.getElementById('CodeData');
 let run = document.getElementById('run');
@@ -11,6 +13,9 @@ Im.onchange = function() {
 	reader.onload = function() {
 		c.value = reader.result;
 	}
+}
+Up.onclick = function(){
+	Im.click();
 }
 function saveTextAsFile(filename,data){
 	var textToWrite = data;
@@ -45,12 +50,25 @@ function passCodeToPy(Data){
 
 run.onclick = function(){
 	// console.log("hey");
-	o.value = c.value.split(" ").reverse().toString().replace(/,/g," ")
+	o.value = c.value.split("").reverse().toString().replace(/,/g,"")
 }
 save.onclick = function(){
 	console.log(c.vale);
 	saveTextAsFile(window.prompt("file name"),c.value);
 }
 clear.onclick = function(){
-	c.value = "";
+	if(window.prompt("are you sure")=="yes"){
+		c.value = ""
+	}
 }
+clear.onmouseover = function(){
+	c.style.animationName = "clearo";
+	c.style.animationDuration = "3s";
+	c.style.animationName = "clearl";
+	c.style.animationDuration = "3s";
+}
+clear.onmouseleave = function(){
+	c.style.animationName = "";
+	c.style.animationDuration = "";
+}
+
