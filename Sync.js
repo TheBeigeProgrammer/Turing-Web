@@ -57,7 +57,7 @@ save.onclick = function(){
 	saveTextAsFile(window.prompt("file name"),c.value);
 }
 clear.onclick = function(){
-	if(window.prompt("are you sure")=="yes"){
+	if(confirm("are you sure")){
 		c.value = ""
 	}
 }
@@ -71,4 +71,3 @@ clear.onmouseleave = function(){
 	c.style.animationName = "";
 	c.style.animationDuration = "";
 }
-
