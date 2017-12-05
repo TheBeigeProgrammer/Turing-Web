@@ -54,10 +54,13 @@ run.onclick = function(){
 }
 save.onclick = function(){
 	console.log(c.vale);
-	saveTextAsFile(window.prompt("file name"),c.value);
+	var _filename = window.prompt("File name");
+	if(_filename){
+	saveTextAsFile(_filename,c.value);
+}
 }
 clear.onclick = function(){
-	if(confirm("are you sure")){
+	if(confirm("Are you sure?")){
 		c.value = ""
 	}
 }
