@@ -14,7 +14,12 @@ body{
 	grid-gap: .5em;
 	margin: .5em;
 	grid-template-rows: 1fr 30fr;
-
+}
+.Console{
+	height: 99%;
+	margin: .5em;
+	display: grid;
+	grid-template-columns: 99%;
 }
 #buttons{
 	height: inherit;
@@ -27,7 +32,7 @@ body{
 	height: inherit;
 	display: grid;
 	grid-gap: .5em;
-	grid-template-columns: repeat(2,auto);
+	grid-template-columns: auto;
 }
 .TXTconsainer{
 	display: grid;
@@ -49,7 +54,7 @@ body{
 button{
 	border: none;
 	background-color: white;
-	border-radius: 1em; 
+	border-radius: 1em;
 }
 @keyframes bactive{
 	to{

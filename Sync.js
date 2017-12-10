@@ -1,7 +1,7 @@
 let Up = document.getElementById('Upload');
 let Im = document.createElement("input");
 Im.type = "file";
-let o = document.getElementById('ConsoleData');
+// let o = document.getElementById('ConsoleData');
 let c = document.getElementById('CodeData');
 let run = document.getElementById('run');
 let save = document.getElementById('save');
@@ -50,7 +50,8 @@ function passCodeToPy(Data){
 
 run.onclick = function(){
 	// console.log("hey");
-	o.value = c.value.split("").reverse().toString().replace(/,/g,"")
+	localStorage.setItem("CodeValue",c.value.split("").reverse().toString().replace(/,/g,""));
+	open("Console.html");
 }
 save.onclick = function(){
 	console.log(c.vale);
