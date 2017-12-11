@@ -1,0 +1,24 @@
+*** FATAL INTERNAL ERROR in Turing Standalone Executable ***
+Date: Dec 10 2017 11:02 PM
+
+File Name: C:\Turing-Web\OpenTuring\support\TuringEXEProlog.exe
+Version: 4.0.4d  [11]
+File Size: 1704448
+File Date: Nov 26 2017 7:05 PM
+Operating System: Bad OS Value (0)
+JVM: "assert" Statements: enabled
+
+The environment has experienced an unexpected internal error.
+
+This error is caused by a bug in the environment and is not your fault!
+Details about the crash have been saved in the file "C:\Turing-Web\OpenTuring\support\panic.log".
+
+If possible, please e-mail this file to trishume@me.com
+
+Here are some details about the error:
+   Error = MIOFile Module Failure #201 (15013)
+   File = ..\src\miofile.c
+   Line = 911
+
+All unsaved open files will be saved with a .sav or .sv# extension.
+------------------------------------------------------

@@ -1,0 +1,88 @@
+*{
+	margin:0px;
+}
+html{
+	height: 99%;
+}
+body{
+	height: 99%;
+	background-color: skyblue;
+}
+.grid{
+	height: inherit;
+	display: grid;
+	grid-gap: .5em;
+	margin: .5em;
+	grid-template-rows: 1fr 30fr;
+}
+.Console{
+	height: 99%;
+	margin: .5em;
+	display: grid;
+	grid-template-columns: 99%;
+}
+#buttons{
+	height: inherit;
+	display: grid;
+	grid-gap: .5em;
+	grid-template-columns: repeat(6,auto);
+	grid-auto-rows: 1em;
+}
+.IDE{
+	height: inherit;
+	display: grid;
+	grid-gap: .5em;
+	grid-template-columns: auto;
+}
+.TXTconsainer{
+	display: grid;
+	grid-template-rows: 1fr 25fr;
+	grid-gap: .5em;
+}
+#CodeTitle{
+	display: grid;
+	grid-gap: .5em;
+	grid-template-columns: repeat(2,auto);
+}
+.TXT{
+	resize: none;
+}
+.get{
+	float: right;
+	visibility: hidden;
+}
+button{
+	border: none;
+	background-color: white;
+	border-radius: 1em;
+}
+@keyframes bactive{
+	to{
+		color:white;
+		background-color:black;
+		border-radius: 0px;}
+	}
+@keyframes clearo{
+	from{
+		color:black;
+	}
+	to{
+		color: white;
+	}
+}
+@keyframes clearl {
+	from{
+		color: white;
+	}
+	to{
+		color: black;
+	}
+}
+button:focus{
+	animation-name: bactive;
+	animation-duration: 1s;
+}
+button:hover{
+	cursor: pointer;
+	text-decoration: dotted overline underline;
+}
