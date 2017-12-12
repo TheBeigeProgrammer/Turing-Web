@@ -1,11 +1,15 @@
-let Up = document.getElementById('Upload');
+let Up = $('#Upload')[0];
 let Im = document.createElement("input");
 Im.type = "file";
 // let o = document.getElementById('ConsoleData');
-let c = document.getElementById('CodeData');
-let run = document.getElementById('run');
-let save = document.getElementById('save');
-let clear = document.getElementById('clear');
+let runForm = $("<form>")[0];
+runForm.action = "Console.php";
+runForm.target = "_blanc";
+$("body").append(runForm);
+let c = $('#CodeData')[0];
+let run = $('#run')[0];
+let save = $('#save')[0];
+let clear = $('#clear')[0];
 Im.onchange = function() {
 	let file = Im.files[0];
 	reader = new FileReader();
@@ -51,7 +55,7 @@ function passCodeToPy(Data){
 run.onclick = function(){
 	// console.log("hey");
 	localStorage.setItem("CodeValue",c.value.split("").reverse().toString().replace(/,/g,""));
-	open("Console.html");
+	runForm.submit();
 }
 save.onclick = function(){
 	console.log(c.vale);

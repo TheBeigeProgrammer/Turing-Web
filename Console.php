@@ -7,8 +7,5 @@
 	<div class="Console">
 		<textarea id="ConsoleData" rows="8" cols="80" class="TXT"></textarea>
 	</div>
-	<script>
-	document.getElementById("ConsoleData").value =	localStorage.getItem("CodeValue");
-	</script>
 </body>
 </html>
