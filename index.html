@@ -7,15 +7,12 @@
 <body>
 	<div class="grid">
 		<div id="buttons">
-			<button id = "run">Run</button>
+			<!--<button id = "run">Run</button>-->
+			
 			<button id = "save">Save</button>
 			<!-- import file -->
 			<h>Import A File:</h>
 			<button id="Upload">Upload</button>
-			<!-- <input type="file" id = "import" style="visibility: hidden;"/> -->
-			<!-- getting user input -->
-			<input type="Text" name="get" class = "get">
-			<button type="submit" class = "get">submit</button>
 		</div>
 
 		<div class="IDE">
@@ -25,7 +22,10 @@
 					<p>Code:</p>
 					<button id="clear" type="button">Clear</button>
 				</div>
-				<textarea class="TXT" id = "CodeData">Write Code here</textarea>
+				<form id="runForm" action = "console.php" target="_blanc">
+					<input id = "run" type="submit" value = "run"/>
+					<textarea class="TXT" id = "CodeData">Write Code here</textarea>
+				</form>
 			</div>
 
 

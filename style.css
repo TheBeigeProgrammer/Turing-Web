@@ -25,7 +25,7 @@ body{
 	height: inherit;
 	display: grid;
 	grid-gap: .5em;
-	grid-template-columns: repeat(6,auto);
+	grid-template-columns: repeat(5,auto);
 	grid-auto-rows: 1em;
 }
 .IDE{
@@ -55,6 +55,16 @@ button{
 	border: none;
 	background-color: white;
 	border-radius: 1em;
+}
+#run{
+	border: none;
+	background-color: white;
+	border-radius: 1em;
+}
+#runForm{
+	display: grid;
+	grid-template-rows: 1fr 25fr;
+	grid-gap: .5em;
 }
 @keyframes bactive{
 	to{

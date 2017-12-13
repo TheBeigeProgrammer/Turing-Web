@@ -5,4 +5,9 @@ procedure xput (fString : string)
     put: stremout, fString
 end xput
 
-include "C:\Turing-Web\code1.txt"
+procedure xget (fString : string)
+	put: stremout, "'Get' is not supported at this point in time."
+end xget
+
+include "code1.txt"
+
