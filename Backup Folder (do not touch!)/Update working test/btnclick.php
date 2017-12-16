@@ -1,22 +1,8 @@
 <html>
 <head>
-	<style type="text/css">
-	html{
-		height: 100%
-	}
-	#console{
-		width: 100%;
-		height: 55%
-	}
-	#errors{
-		height: 25%;
-		resize: none;
-		width: 100%;
-	}
-	</style>
 </head>
 <body>
-	<h1>Console</h1>
+	<h1>Test</h1>
 	<?php	
 	
 	#Try running the code, but if there is an error echo the problem
@@ -37,28 +23,21 @@
 		#Echo any errors that might occur from running the shell command
 		if ($error != ""){
 			echo $error;
-			echo "python";
 		}
 		
-		$error = shell_exec('turing -run "C:\Turing-Web\TuringRunCode1.t"'); #Run the Turing Turing program that runs th code
+		$error = shell_exec('C:\Turing-Web\package\turing.exe -run "C:\Turing-Web\TuringRunCode1.t"'); #Run the Turing Turing program that runs th code
 		
 		#Echo any errors that might occur from running the shell command
 		if ($error != ""){
-			echo "<p>Errors:</p>";
-			echo "<textarea readonly id = 'errors'>".$error."</textarea>";
+			echo $error;
 		}
 		
-		$sMy_File = 'output.txt'; #Create variable for path to file to open
-		$handle = fopen($sMy_File, 'r') or die('Cannot open file:  '.$sMy_File); #Open file for reading		
 	}
-	catch (Exception $error){
+	catch (Exception $e){
 		#Echo the error
-		echo $error->getMessage();
+		echo $e->getMessage();
 	}
 	
 	?>
-	<br>
-	<p>Run:</p>
-	<textarea readonly style="resize: none" id="console"><?php echo fread($handle,filesize($sMy_File)) ?></textarea>
 </body>
 </html>

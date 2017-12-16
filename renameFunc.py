@@ -20,17 +20,18 @@ def replaceFunctions(fString):
     
     aSplit = [item for sublist in aSplit for item in sublist] #Remake into 1D array
     
-    aSplit.append("\n") #Add enter to to make the adding brakets works
+    aSplit.append("\n") #Add enter to to make the adding brackets works
     
     #==========Remove Null strings ("")===========
     iCounter = 0 #Generic counter for loops
     for iCounter2 in range (0,len(aSplit)):
-        if aSplit[iCounter]=="":
+        if aSplit[iCounter2]=="":
             iCounter+=1 #Count how many times to remove
     
     for iCounter2 in range (0,iCounter):
         aSplit.remove("")
-    
+    #print aSplit #Debuging
+	
     #===========Remove Redundant Enters============
     iCounter = 0
     while iCounter < len(aSplit): #While loop is used because iCounter can be changed
@@ -39,10 +40,11 @@ def replaceFunctions(fString):
             if aSplit[iCounter] == "\n":
                 if aSplit[iCounter+1]=="\n":
                     aSplit.pop(iCounter) #remove enter
-                    iCounter = 0 #Reset because length has changed
+                    iCounter -= 1 #Change because length has changed
             iCounter+=1
         except IndexError:
             break
+    #print aSplit #Debuging
     
     #===========Replace "get" and "put"===========
     iCounter = 0

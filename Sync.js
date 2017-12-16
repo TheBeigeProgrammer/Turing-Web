@@ -55,18 +55,3 @@ save.onclick = function(){
 	saveTextAsFile(_filename,c.value);
 }
 }
-clear.onclick = function(){
-	if(confirm("Are you sure?")){
-		c.value = ""
-	}
-}
-clear.onmouseover = function(){
-	c.style.animationName = "clearo";
-	c.style.animationDuration = "3s";
-	c.style.animationName = "clearl";
-	c.style.animationDuration = "3s";
-}
-clear.onmouseleave = function(){
-	c.style.animationName = "";
-	c.style.animationDuration = "";
-}

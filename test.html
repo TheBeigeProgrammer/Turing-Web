@@ -1,28 +1,56 @@
 <html>
 	<head>
 		<title>PHP Test</title>
-	</head>
-    <body>   
-		<form action = "btnclick.php" method = "get">
-			<textarea id = "CodeData" name = "CodeData"></textarea>
-			<input type = "submit" name = "submit" value = "Submit">
-		</form>
-		
-		<form action = "btnclick2.php" method = "get">
-			<input type = "submit" name = "read" value = "Read">
-		</form>
-		
-	</body>
-	<script src="jquery-3.2.1.min.js"></script>
-	<script>
-	$(function(){
-		$.ajax({
-			type:"GET",
-			url:"code.txt",
-			success:function(data){
-			console.log($("#CodeData").value);
+		<style type="text/css">
+		*{
+			margin: 0;
+		}
+			html{
+				height: 99%;
 			}
-			})
-			})
-	</script>
+			body{
+				height: 99%;
+			}
+			.wrap{
+				margin: 1em;
+			}
+			#runForm{
+				height: 95%;
+				display: grid;
+				grid-gap: .5em;
+				grid-template-rows: 1fr 25fr;
+			}
+			.button{
+				display: grid;
+				/* grid-auto-rows: 1em; */
+				grid-gap: 5em;
+				grid-template-columns: 2fr .5fr 5fr;
+
+			}
+			.codeButtons{
+				margin: .5em;
+				display: grid;
+				grid-template-columns: repeat(2,auto);
+				grid-gap: 2em;
+			}
+		</style>
+	</head>
+    <body>
+    	<div class="wrap">
+    		<div class="button">
+    			<button id = "save">Save</button>
+				<!-- import file -->
+				<h>Import A File:</h>
+				<button id="Upload">Upload</button>
+			</div>   
+			<form id="runForm" action = "btnclick.php" method = "get" target="_">
+				<div class="CodeButtons">
+					<input id="run" type = "submit" name = "submit" value = "Submit">
+					<button id="clear" type="button">clear</button>
+				</div>
+				<textarea id = "CodeData" name = "CodeData" style="resize: none"></textarea>
+			</form>
+		</div>
+	</body>
+	<script src="script.js"></script>
 </html>
